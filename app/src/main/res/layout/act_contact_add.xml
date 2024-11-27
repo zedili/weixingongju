@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.longrenzhu.base.widget.consecutivescroller.ConsecutiveScrollerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp_30"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:scaleType="fitXY"
+            android:src="@drawable/tt_default_portrait"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <com.longrenzhu.base.widget.common.InputWidget
+            android:id="@+id/wxNickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:zt_title="微信昵称"
+            app:zt_layoutId="@layout/widget_input_1"
+            />
+
+        <com.longrenzhu.base.widget.common.InputWidget
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:zt_title="手机号码"
+            app:zt_inputType="mobile"
+            android:layout_marginTop="@dimen/dp_10"
+            app:zt_layoutId="@layout/widget_input_1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_20"
+        android:orientation="vertical">
+
+        <com.longrenzhu.common.widget.common.ItemSwitchLayout
+            android:id="@+id/wxVoiceFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            app:zt_title="微信语音"/>
+
+        <com.longrenzhu.common.widget.common.ItemSwitchLayout
+            android:id="@+id/wxVideoFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            app:zt_title="微信视频"/>
+
+        <com.longrenzhu.common.widget.common.ItemSwitchLayout
+            android:id="@+id/phoneFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            app:zt_title="电话"/>
+
+        <com.longrenzhu.common.widget.common.ItemSwitchLayout
+            android:id="@+id/noAnswerFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            app:zt_title="免接听模式"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/vTvSave"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:gravity="center"
+            android:text="保存联系人"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/selector_prompt_right"/>
+
+        <TextView
+            android:id="@+id/vTvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="取消保存"
+            android:textColor="@color/cl_1F2736"
+            android:textSize="@dimen/sp_16"
+            android:background="@drawable/selector_prompt_left"/>
+
+        <TextView
+            android:id="@+id/vTvDelete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="删除联系人"
+            android:visibility="gone"
+            android:textColor="@color/cl_1F2736"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/selector_prompt_left"/>
+    </LinearLayout>
+</com.longrenzhu.base.widget.consecutivescroller.ConsecutiveScrollerLayout>

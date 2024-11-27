@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/vIvHeader"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_16"
+            android:src="@drawable/tt_default_portrait"/>
+
+
+        <TextView
+            android:id="@+id/vTvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:textColor="@color/cl_161722"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp_14"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/vTvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cl_161722"
+                android:textSize="@dimen/sp_12"/>
+
+            <TextView
+                android:id="@+id/vTvWeekday"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cl_161722"
+                android:textSize="@dimen/sp_12"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/vTvSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_16"
+            android:padding="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_18"
+            android:text="设置"
+            android:background="@drawable/common_click"
+            android:textColor="#01C6AC"/>
+
+    </LinearLayout>
+
+    <com.longrenzhu.base.widget.ptr.PtrHTFrameLayout
+        android:id="@+id/vRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.longrenzhu.base.widget.recyclerview.SuperRecyclerView
+            android:id="@+id/vRvContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.longrenzhu.base.widget.ptr.PtrHTFrameLayout>
+
+
+
+</LinearLayout>

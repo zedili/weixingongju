@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.longrenzhu.base.widget.consecutivescroller.ConsecutiveScrollerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:background="@drawable/shape_et_bg">
+
+        <TextView
+            android:id="@+id/vTvInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_40"
+            android:maxLength="11"
+            android:gravity="end"
+            android:textSize="@dimen/sp_24"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/vIvClose"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:src="@drawable/back"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        />
+    <com.longrenzhu.base.widget.recyclerview.SuperRecyclerView
+        android:id="@+id/vRvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        />
+
+    <com.longrenzhu.base.widget.recyclerview.SuperRecyclerView
+        android:id="@+id/vRvContent1"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"/>
+
+
+</com.longrenzhu.base.widget.consecutivescroller.ConsecutiveScrollerLayout>

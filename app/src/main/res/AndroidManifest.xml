@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dt.haoyuntong">
+
+<!--    <queries>-->
+<!--        <intent>-->
+<!--            <action android:name="android.intent.action.SEND"/>-->
+<!--            <data android:mimeType="image/png"/>-->
+<!--        </intent>-->
+<!--    </queries>-->
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.BATTERY_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- <uses-permission android:name="android.permission.READ_CALL_LOG" />-->
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission
+        android:name="com.android.permission.GET_INSTALLED_APPS"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="demo"
+        android:name=".App"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".activity.DemoAct"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MainAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true">
+
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+           <!--     <category android:name="android.intent.category.HOME" />-->
+            </intent-filter>
+          <!--  <intent-filter>
+                &lt;!&ndash;下面这几行也必须得设置&ndash;&gt;
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                &lt;!&ndash;协议部分，随便设置&ndash;&gt;
+                <data android:scheme="xiaofeng" android:host="zc" android:path="/main" />
+
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true"
+                tools:targetApi="m">
+                &lt;!&ndash;下面这几行也必须得设置&ndash;&gt;
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                &lt;!&ndash;协议部分，随便设置&ndash;&gt;
+                <data android:scheme="https" android:host="bbapp.xiaofengwang.com" />
+            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".activity.LoginAct" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SettingAct" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ContactAddAct" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ContactListAct" android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.SystemAct"  />
+        <activity android:name=".activity.AppSettingAct"  />
+        <activity android:name=".activity.FzSettingAct"  />
+        <activity android:name=".activity.CallPhoneAct"  />
+
+        <service
+            android:name=".service.MyAccessibilityService"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <service android:name=".service.AutoHelperServer"
+            android:enabled="true"
+            android:exported="false"
+            android:label="@string/auto_hold_wechat"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/auto_control_service_config" />
+                />
+
+        </service>
+
+        <receiver
+            android:name=".service.SmartActionReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.dt.ACTION_OPEN_SEND_WECHAT" />
+                <action android:name="com.dt.ACTION_PRINT_LAYOUT" />
+                <action android:name="com.dt.ACTION_SWIPE" />
+            </intent-filter>
+        </receiver>
+
+<!--        <receiver android:name=".service.AppInstallReceiver"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.PACKAGE_ADDED" />-->
+<!--                <action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+<!--                <data android:scheme="com.dt.haoyuntong" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+   <!--     <receiver android:name=".service.PhoneCallReceiver"
+            android:exported="true"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>-->
+
+      <!--  <receiver
+            android:name=".util.BatteryReceiver"
+            android:exported="true"
+            tools:ignore="Instantiatable">
+        </receiver>-->
+
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white">
+
+
+   <!-- <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/cl_1F2736"
+        android:textSize="@dimen/sp_30"
+        android:text="登录"
+        android:layout_marginTop="@dimen/dp_80"
+        android:layout_marginLeft="@dimen/dp_30"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/cl_1F2736"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:text="没有账号? 请联系客服注册手机后登陆"/>-->
+
+
+    <com.longrenzhu.base.widget.shape.view.ShapeTextView
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
+        android:layout_marginTop="@dimen/dp_45"
+        app:shape_radius="@dimen/dp_150"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_28"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="好运通"
+        app:shape_solidColor="@color/cl_01C6AC"/>
+
+
+
+    <com.longrenzhu.common.widget.common.CodeEditText
+        android:id="@+id/vWidgetPhone"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_45"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        app:zt_hint="请输入手机号码"
+        />
+
+
+
+
+    <com.longrenzhu.base.widget.common.InputWidget
+        android:id="@+id/vWidgetCode"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        app:zt_inputType="number"
+        app:zt_layoutId="@layout/widget_input_code"
+        app:zt_hint="请输入验证码"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_30"
+        android:background="@color/line"/>
+
+
+    <TextView
+        android:id="@+id/vTvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_60"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:textColor="@drawable/selector_login_btn_text"
+        android:background="@drawable/selector_login_btn"
+        android:text="登录"/>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <com.longrenzhu.base.widget.common.ratio.RatioLinearLayout
+        android:id="@+id/vContent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:zt_ratio="1"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/vTvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_34"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+    </com.longrenzhu.base.widget.common.ratio.RatioLinearLayout>
+
+    <TextView
+        android:id="@+id/vTvText1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/sp_34"
+        android:background="@color/cl_01C6AC"
+        android:gravity="center"
+        android:text="拨号"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

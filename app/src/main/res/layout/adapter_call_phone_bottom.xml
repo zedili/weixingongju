@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.longrenzhu.base.widget.common.ratio.RatioLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:zt_ratio="1"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/vIvIcon"
+        android:layout_width="@dimen/dp_44"
+        android:layout_height="@dimen/dp_44"/>
+
+    <TextView
+        android:id="@+id/vTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"/>
+
+</com.longrenzhu.base.widget.common.ratio.RatioLinearLayout>
